@@ -1,8 +1,7 @@
 #coding:utf8
 '''
-Created on 2018��11��6��
-reference:
-https://www.jb51.net/article/135972.htm
+Created on 2018年116
+
 @author: Administrator
 '''
 import cv2 
