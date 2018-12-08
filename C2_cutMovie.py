@@ -22,7 +22,7 @@ def main():
         zeroOneArr=pkl.load(zeroOneArrFile)
         
     print("get cut point in the frame of fraction of the movie ...")
-    cutPointList=[i/zeroOneArr.shape[0] for i in range(zeroOneArr.shape[0]-1) if isCutPoint(zeroOneArr[i:i+1])==True]
+    cutPointList=[i/zeroOneArr.shape[0] for i in range(zeroOneArr.shape[0]-1) if isCutPoint(zeroOneArr[i:i+2])==True]
     cutPointList=[0]+cutPointList+[1]
     
     print("cut point list:",cutPointList)    
