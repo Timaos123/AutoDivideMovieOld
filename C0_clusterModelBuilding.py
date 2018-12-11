@@ -52,6 +52,7 @@ def main(clusterStarter=2,\
     
     print("saving figure ...")
     plt.savefig("figures/clustering_figure.jpg")
+    plt.close()
     clusterListImg=clusterListImg.convert('RGB')
     clusterListImg.save("figures/clusterList_figure.png")
     
@@ -103,6 +104,7 @@ if __name__ == '__main__':
     plt.savefig("figures/clustering_figure.jpg")
     clusterListImg=clusterListImg.convert('RGB')
     clusterListImg.save("figures/clusterList_figure.png")
+    plt.close()
     
     print("clustering ...")
     bestClusterList=kcluster(reStruMovieArr,nclusters=maxClu)[0].tolist()

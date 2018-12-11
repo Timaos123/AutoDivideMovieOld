@@ -45,7 +45,7 @@ def main(imgWidth,\
                         img_passes=img_passes,\
                         pool_size = pool_size,\
                         vecLen=vecLen).buildCNNSeriesModel()
-                         
+                          
     print("training model ...")
     cnnGenModel.fit(x_train,np.array(y_train),\
                     validation_split=validation_split,\
@@ -54,7 +54,8 @@ def main(imgWidth,\
                     callbacks=[TensorBoard(log_dir="./log")])
      
     print("saving training model ...")
-    cnnGenModel.save("models/DPModel.h5")
+#     cnnGenModel.save("models/DPModel.h5")
+    cnnGenModel=keras.models.load_model("models/DPModel.h5")
     
     print("predicting model construction ...")
     intermediate_layer_model = Model(inputs=cnnGenModel.input, 

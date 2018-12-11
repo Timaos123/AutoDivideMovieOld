@@ -7,7 +7,6 @@ Created on 2018年11月23日
 import pickle as pkl
 import numpy as np
 import matplotlib
-matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 def isCutPoint(cmpedArr):
@@ -87,6 +86,7 @@ def main(varSize=50,divideMethod="mean",thresholdAdj=0.1,showFig=False):
     
     print("saving data and figures ...")
     plt.savefig("figures/var_figure.jpg")
+    plt.close()
     with open("structuredData/zeroOneArr.pkl","wb+") as zeroOneArrFile:
         pkl.dump(zeroOneVarArr,zeroOneArrFile)
     if showFig==True:
@@ -94,4 +94,4 @@ def main(varSize=50,divideMethod="mean",thresholdAdj=0.1,showFig=False):
     print("finished!")
             
 if __name__ == '__main__':
-    main()
+    main(showFig=True)

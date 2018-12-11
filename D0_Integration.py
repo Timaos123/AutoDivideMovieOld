@@ -41,7 +41,7 @@ if __name__ == '__main__':
     img_num=9
     img_passes=3
     pool_size = (5,5)
-    vecLen=100
+    vecLen=150
     
     clusterVarWindowsSize=50
     clusterVarDivideMethod="mean"
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     clusterStarter=3
     clusterEnder=12
     clusterStep=2
-    thresholdAdj=0
+    thresholdAdj=+1
     
     clearVarList=True
     if clearVarList==True:
